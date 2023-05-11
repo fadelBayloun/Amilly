@@ -1,0 +1,612 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    width: 90vw;
+    margin: auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.dots {
+    margin-bottom: 100px;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+body {
+    background-color: white;
+    height: 100vh;
+    color: wheat;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    background-image: url("images/WoodPattern2.jpg"), linear-gradient(rgba(0, 0, 0, 0.808), white);
+    /* background-blend-mode: multiply; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.Content {
+    height: 100vh;
+    text-align: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.Products {
+    height: 90vh;
+    position: relative;
+}
+
+/* Jelly Section */
+
+#Jellies {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* background-image: url("images/jellybg2.png"); */
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    position: relative;
+    height: fit-content;
+}
+
+img.jellyBorder {
+    position: absolute;
+    bottom: -10%;
+    width: 100vw;
+    z-index: 800;
+}
+
+#Jellies h1 {
+    margin-bottom: 2em;
+}
+
+#jellyImages {
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#jellyImages img {
+    width: 40vw;
+}
+
+@media screen and (min-width: 500px) {
+
+    #jellyImages img {
+        width: 20vw;
+    }
+}
+
+/* Image rotating */
+
+.rotate {
+    animation: jellyRotation 4s infinite ease-in-out;
+}
+
+.rotate:nth-of-type(2n) {
+    animation: jellyRotationOff 4s infinite ease-in-out;
+}
+
+@keyframes jellyRotation {
+    0% {
+        transform: rotatez(10deg);
+    }
+
+    25% {
+        transform: rotatez(-10deg);
+
+    }
+
+    50% {
+        transform: rotatez(10deg);
+
+    }
+
+    75% {
+        transform: rotatez(-10deg);
+
+    }
+
+    100% {
+        transform: rotatez(10deg);
+    }
+
+}
+
+@keyframes jellyRotationOff {
+    0% {
+        transform: rotatez(-10deg);
+    }
+
+    25% {
+        transform: rotatez(10deg);
+
+    }
+
+    50% {
+        transform: rotatez(-10deg);
+
+    }
+
+    75% {
+        transform: rotatez(10deg);
+
+    }
+
+    100% {
+        transform: rotatez(-10deg);
+    }
+
+}
+
+
+/* --------------------------- */
+/* Nuts Section */
+
+#Nuts {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#nutImages {
+    width: 100%;
+    height: 50%;
+}
+
+#nutImages img {
+    max-width: 500px;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    transition: all ease-in-out 1.5s;
+    z-index: 5;
+}
+
+@media screen and (min-width: 500px) {
+
+    #nutImages img {
+        width: 20vw;
+    }
+}
+
+
+/* Nuts sliding */
+
+.slideDown50 {
+    z-index: 0;
+    top: 25%;
+    left: 50%;
+}
+
+.slideDown60 {
+    z-index: 1;
+    top: 30%;
+}
+
+.slideDown70 {
+    z-index: 2;
+    top: 40%;
+}
+
+.slideDown80 {
+    z-index: 3;
+    top: 50%;
+}
+
+#nutImages img.horizontalSlide {
+    width: 30%;
+}
+
+.horizontalSlide:nth-of-type(1) {
+    left: 25%;
+}
+
+.horizontalSlide:nth-of-type(2) {
+    left: 50%;
+}
+
+.horizontalSlide:nth-of-type(3) {
+    left: 75%;
+}
+
+.horizontalSlide:nth-of-type(4) {
+    left: 80%;
+}
+
+
+/* --------------------------- */
+.Container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 90vw;
+    margin: auto;
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    /* background-image: linear-gradient(rgb(0, 0, 0), rgba(255, 255, 255, 0)); */
+    /* box-shadow: 10px 10px 50px 1px rgba(0, 0, 0, 0.749); */
+}
+
+@media screen and (min-width: 500px) {
+
+    .Container {
+        height: 100vh;
+        margin-top: 100px;
+    }
+
+    .container-text {
+        height: 0;
+        margin-bottom: -10vh;
+    }
+}
+
+.logo {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+
+header {
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    padding: 1em;
+    justify-content: space-between;
+}
+
+footer {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Burger {
+    position: absolute;
+    right: 30px;
+    z-index: 999;
+    top: 25px;
+}
+
+.Burger div {
+    border: solid;
+    width: 25px;
+    margin: 5px;
+    border-radius: 50px;
+}
+
+.Menu {
+    height: 0;
+    width: 0;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    z-index: 999;
+    left: 100%;
+    top: 0%;
+    transform: translate(-50%, -50%);
+    color: transparent;
+    font-size: 0;
+    transition-property: height, width, left, top;
+    transition: ease-in-out 0.5s;
+    background-color: transparent;
+    filter: blur(100%);
+}
+
+.Menu.Open {
+    background-color: #f5deb3;
+    color: black;
+    display: flex;
+    left: 50%;
+    top: 50%;
+    font-size: 1em;
+    height: 100vh;
+    filter: blur(0%);
+    width: 100vw;
+}
+
+.Menu.Open~.Burger {
+    color: #a52a2a;
+}
+
+.Menu a {
+    text-decoration: none;
+    color: brown;
+}
+
+.container-text {
+    height: 100px;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    position: relative;
+    color: #f5deb3;
+}
+
+/* --------------------------- */
+/* Chocolate Section */
+#Chocolate {
+    flex-direction: column;
+    /* background-image: url("images/grass.PNG"), linear-gradient(rgba(0, 0, 0, 0.199) 50%, rgba(0, 0, 0, 0)); */
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+}
+
+img.chocBorder {
+    position: absolute;
+    bottom: -4%;
+    width: 100vw;
+    z-index: 800;
+}
+
+.top,
+.bottom {
+    position: relative;
+    height: 50%;
+    width: 100%;
+}
+
+.left {
+    position: absolute;
+    width: 50vw;
+    z-index: 99;
+    left: 5%;
+    bottom: 0;
+    transition: all 1s ease-in-out;
+}
+
+.right {
+    position: absolute;
+    width: 50vw;
+    z-index: 99;
+    right: 5%;
+    bottom: 0%;
+    transition: all 1s ease-in-out;
+}
+
+.right:nth-of-type(2),
+.left:nth-of-type(2) {
+    width: 40vw;
+    bottom: -3%;
+    z-index: 98;
+}
+
+.left:nth-of-type(2),
+.left:nth-of-type(3) {
+    left: 10%;
+}
+
+.right:nth-of-type(2),
+.right:nth-of-type(3) {
+    right: 10%;
+}
+
+.right:nth-of-type(3),
+.left:nth-of-type(3) {
+    width: 30vw;
+    z-index: 97;
+}
+
+@media screen and (min-width: 500px) {
+
+    .left {
+        position: absolute;
+        width: 20vw;
+        z-index: 99;
+        left: 5%;
+        bottom: 0;
+        transition: all 1s ease-in-out;
+    }
+
+    .right {
+        position: absolute;
+        width: 20vw;
+        z-index: 99;
+        right: 5%;
+        bottom: 0%;
+        transition: all 1s ease-in-out;
+    }
+
+    .right:nth-of-type(2),
+    .left:nth-of-type(2) {
+        width: 15vw;
+        bottom: -3%;
+        z-index: 98;
+    }
+
+    .right:nth-of-type(3),
+    .left:nth-of-type(3) {
+        width: 10vw;
+        z-index: 97;
+    }
+
+    .left:nth-of-type(2),
+    .left:nth-of-type(3) {
+        left: 8%;
+    }
+
+    .right:nth-of-type(2),
+    .right:nth-of-type(3) {
+        right: 8%;
+    }
+}
+
+.show {
+    opacity: 100%;
+}
+
+/* --------------------------- */
+/* image translating */
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80vw;
+}
+
+form div {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+    justify-content: space-between;
+}
+
+input {
+    outline: none;
+    border: none;
+    width: 70%;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: wheat;
+    color: brown;
+}
+
+textarea {
+    border: none;
+    width: 70%;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: wheat;
+    color: brown;
+    resize: none;
+}
+
+button {
+    border-radius: 5px;
+    padding: 5px;
+    height: 50px;
+    border: none;
+    width: 100px;
+    background-color: transparent;
+    background-color: wheat;
+    color: brown;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+fieldset {
+    border: solid;
+}
