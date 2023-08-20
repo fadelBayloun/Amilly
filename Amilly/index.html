@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded&display=swap" rel="stylesheet">
+    <script src="app.js" defer></script>
+    <title>Amilly</title>
+</head>
+
+<body>
+    <div class="loading">
+        <h1 style="font-size: 4em;"></h1>
+        <div class="loadingContainer">
+            <div class="dash uno"></div>
+            <div class="dash dos"></div>
+            <div class="dash tres"></div>
+            <div class="dash cuatro"></div>
+        </div>
+    </div>
+    <div class="workInProgress">Work in Progress<br> Please check the mobile version of the site</div>
+    <div class="Content">
+        <div class="slideshow-container" id="0">
+            <header>
+                <h1 class="logo">Amilly</h1>
+            </header>
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade carouselImg" style="background-image: url('images/jelliesCarousel.jpeg');">
+            </div>
+
+            <div class="mySlides fade carouselImg"
+                style="background-image: url('images/WhatsApp\ Image\ 2023-02-06\ at\ 22.36.43.jpeg');">
+            </div>
+            <div class="mySlides fade carouselImg"
+                style="background-image: url('images/WhatsApp\ Image\ 2023-02-06\ at\ 22.36.43\ \(1\).jpeg');">
+            </div>
+
+            <div class="mySlides fade carouselImg" style="background-image: url('images/chocolateCarousel.jpeg');">
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <!-- The dots/circles -->
+        <div class="dots" style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+
+
+        <!-- Nuts Section -->
+        <div class="container-text" id="1">
+            <h1>NUTS</h1>
+        </div>
+        <div class="Container" id="Nuts">
+            <div id="nutImages">
+                <img class="slideDown50" src="images/corn.png" />
+                <img class="slideDown50" src="images/krikri.png" />
+                <img class="slideDown50" src="images/sunflower.png" />
+            </div>
+        </div>
+
+        <!-- Chocolate Section -->
+        <div class="container-text" id="2">
+            <h1 id="chocoText">SPREADS</h1>
+        </div>
+        <div class="Container" id="Chocolate">
+            <div class="top">
+                <img class="left" src="images/chocoJar.png">
+                <img class="left" src="images/hazelSmall.png">
+                <img class="left" src="images/hazelBig.png">
+            </div>
+            <div class=" bottom">
+                <img class="right" src="images/hazelJar.png">
+                <img class="right" src="images/chocoBig.png">
+                <img class="right" src="images/chocoSmall.png">
+            </div>
+        </div>
+
+        <!-- Jellies Section -->
+        <div class="container-text" id="3">
+            <h1>CANDIES</h1>
+        </div>
+        <div class="Container" id="Jellies">
+            <div id="jellyImages">
+                <img class="rotate" src="images/jellyGreen.PNG" />
+                <img class="rotate" src="images/jellyYellow.PNG" />
+                <img class="rotate" src="images/jellyBlue.png" />
+                <img class="rotate" src="images/jellyRed.PNG" />
+            </div>
+        </div>
+
+        <footer id="4">
+            <fieldset>
+                <legend>
+                    <h1>Hit Us Up!</h1>
+                </legend>
+
+                <form>
+                    <div>
+                        <p>Name: &nbsp;</p><input id="name"></input>
+                    </div>
+                    <div>
+                        <p>Number: &nbsp;</p><input id="phone"></input>
+                    </div>
+                    <div>
+                        <p>Message: &nbsp;</p><Textarea id="Message" rows="10" a></Textarea>
+                    </div>
+                </form>
+                <button><a id="email"
+                        href="mailto:test@example.com?subject=Testing out mailto!&body=This is only a test!">
+                        Send
+                    </a></button>
+            </fieldset>
+            <br>
+            <h1>
+                <a href="https://www.instagram.com/amilly.lb/"><img
+                        src="https://img.icons8.com/material-outlined/50/ffffff/instagram-new--v1.png" /></a>
+                <a href="https://www.facebook.com/profile.php?id=100087207434333"><img
+                        src="https://img.icons8.com/material-outlined/50/ffffff/facebook-circled--v5.png" /></a>
+            </h1>
+        </footer>
+        <br>
+        <br>
+        <br>
+    </div>
+</body>
+
+</html>
